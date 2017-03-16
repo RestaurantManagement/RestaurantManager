@@ -1,0 +1,10 @@
+<% provide(:title, @category.content) %>
+
+<div class="row">
+	<h3><%= @category.content %></h3>
+	<% if @category.menu_items.any? %>
+		<h4>Menu items (<%= @category.menu_items.count %>)</h4>
+		<%= render @menu_items%>
+		<%= will_paginate @menu_items %>
+	<% end %>
+</div>

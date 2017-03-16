@@ -1,0 +1,14 @@
+<% provide(:title, "Menu") %>
+
+<div class="row">
+<% @categories.each_with_index do |category, index| %>
+  
+    <div class="col-md-6">
+      <a href=<%= "menu/#{category.id}" %> >
+        <h2><%= category.content %></h2>
+        <%= image_tag category.image_url.to_s , width: "100%", height: "300px" %>
+      </a>
+    </div>
+ 
+<% end %>
+ </div>

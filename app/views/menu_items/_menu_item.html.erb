@@ -1,0 +1,17 @@
+<li id="menu_item-<%= menu_item.id %>">
+  <%= image_tag menu_item.image_url(:thumb).to_s %>
+  <span class="name">Name :<%= menu_item.name %></span>
+  <span class="price">| Price: <%= menu_item.price %></span>
+  <span class="description">| Description: <%= menu_item.description %></span>
+  <span class="timestamp">
+    | Posted <%= time_ago_in_words(menu_item.created_at) %> ago.
+  </span>
+  <span><%= link_to "Show", menu_item %></span>
+  <% if admin_user? %>
+  <span><%= link_to 'Edit', edit_menu_item_path(menu_item) %></span>
+  <span><%= link_to 'Destroy', menu_item, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+  <% end %>
+  <% if logged_in? %>
+  <span><%= link_to 'Order', "#" %></span>
+  <% end %>
+</li>

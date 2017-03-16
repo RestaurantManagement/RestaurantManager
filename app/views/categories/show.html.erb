@@ -1,0 +1,22 @@
+<% provide(:title, @category.content) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="category_info">
+      <h1>
+        <%= @category.content %>
+      </h1>
+    </section>
+  </aside>
+  <div class="col-md-8">
+    <% if @category.menu_items.any? %>
+      <h3>Menu items (<%= @category.menu_items.count %>)</h3>
+      <ol class="menu_items">
+        <%= render @menu_items %>
+      </ol>
+      <%= will_paginate @menu_items %>
+    <% end %>
+  </div>
+</div>
+
+<%= link_to 'Edit', edit_category_path(@category) %> |
+<%= link_to 'Back', categories_path %>
