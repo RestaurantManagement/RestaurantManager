@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @temp_order.user %>
+</p>
+
+<p>
+  <strong>Table:</strong>
+  <%= @temp_order.table %>
+</p>
+
+<%= link_to 'Edit', edit_temp_order_path(@temp_order) %> |
+<%= link_to 'Back', temp_orders_path %>

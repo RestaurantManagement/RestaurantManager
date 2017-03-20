@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170315140450) do
+ActiveRecord::Schema.define(version: 20170320124506) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "content"
@@ -29,6 +29,55 @@ ActiveRecord::Schema.define(version: 20170315140450) do
     t.string   "image"
     t.index ["category_id", "created_at"], name: "index_menu_items_on_category_id_and_created_at"
     t.index ["category_id"], name: "index_menu_items_on_category_id"
+  end
+
+  create_table "order_items", force: :cascade do |t|
+    t.integer  "menu_item_id"
+    t.integer  "quantity"
+    t.integer  "order_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["menu_item_id"], name: "index_order_items_on_menu_item_id"
+    t.index ["order_id"], name: "index_order_items_on_order_id"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "table_id"
+    t.datetime "book_time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean  "paid"
+    t.index ["table_id"], name: "index_orders_on_table_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
+  end
+
+  create_table "tables", force: :cascade do |t|
+    t.integer  "no"
+    t.boolean  "beingUsed?"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["no"], name: "index_tables_on_no", unique: true
+  end
+
+  create_table "temp_order_items", force: :cascade do |t|
+    t.integer  "menu_item_id"
+    t.integer  "quantity"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "temp_order_id"
+    t.index ["menu_item_id"], name: "index_temp_order_items_on_menu_item_id"
+    t.index ["temp_order_id"], name: "index_temp_order_items_on_temp_order_id"
+  end
+
+  create_table "temp_orders", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "table_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.datetime "book_time"
+    t.index ["table_id"], name: "index_temp_orders_on_table_id"
+    t.index ["user_id"], name: "index_temp_orders_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

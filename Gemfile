@@ -21,6 +21,8 @@ gem 'bootstrap-will_paginate', '0.0.10'
 #upload file gems
 gem 'carrierwave'
 gem "mini_magick"
+#http service
+gem 'axios_rails'
 #
 gem 'sqlite3'
 # Use Puma as the app server

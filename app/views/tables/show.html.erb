@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>No:</strong>
+  <%= @table.no %>
+</p>
+
+<p>
+  <strong>Beingused?:</strong>
+  <%= @table.beingUsed? %>
+</p>
+
+<%= link_to 'Edit', edit_table_path(@table) %> |
+<%= link_to 'Back', tables_path %>

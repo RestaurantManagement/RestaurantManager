@@ -1,0 +1,8 @@
+<h1>New Temp Order By user</h1>
+<% if @form[:method] == :patch %>
+	<% update = true %>
+<% end %>
+<%= render 'formByUser', temp_order: @temp_order, tables: @tables, current_table: @current_table,
+						 form: @form , temp_order_items: @temp_order_items, update: update %>
+
+<%= link_to 'Back', temp_orders_path %>

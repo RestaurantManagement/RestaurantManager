@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Temp Orders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Table</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @temp_orders.each do |temp_order| %>
+      <tr>
+        <td><%= temp_order.user %></td>
+        <td><%= temp_order.table %></td>
+        <td><%= link_to 'Show', temp_order %></td>
+        <td><%= link_to 'Edit', edit_temp_order_path(temp_order) %></td>
+        <td><%= link_to 'Destroy', temp_order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Temp Order', new_temp_order_path %>

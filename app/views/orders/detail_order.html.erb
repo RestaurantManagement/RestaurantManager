@@ -1,0 +1,46 @@
+<div class="row">
+  <h2>Detail your submitted order created at <%= @order.created_at %></h2>
+  <h4>Table no: <%= @order.table.no %></h4>
+  <h4>Book time: <%= @order.book_time %></h4>
+  <h4>Total price: <%= @order.total_price %></h4>
+  <h4 id="paid">Paid? : <%= @order.paid ? "yes": "no" %></h4>
+  <% if admin_user? && !@order.paid %>
+    <button type="button" class="btn btn-default" id="btnPay">Pay</button>
+  <% end %>
+  <h4><%= @order.order_items.count %> items</h4>
+  <div class="row">
+    <ul>
+      <% @order.order_items.each do |item| %>
+        <% menu_item = item.menu_item %>
+        <li>
+          <%= image_tag menu_item.image_url(:thumb).to_s %>
+          <span>Name: <%= menu_item.name %></span>
+          <span>Unit price: <%= menu_item.price %></span>
+          <span>Quantity: <%= item.quantity %></span>
+          <span>Item price: <%= item.price %></span>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<script>
+  $('#btnPay').click(function(event) {
+    var id = <%= @order.id %>
+    var userId = <%= session[:user_id] %>
+    console.log('Token: ',  $('meta[name="csrf-token"]').attr("content"))
+    var token = $('meta[name="csrf-token"]').attr("content")
+    
+    axios.post("/orders/" + id + "/pay", {
+      user_id: userId, authenticity_token: token
+    })
+    .then(function(res) {
+      console.log('Response: ',res)
+      $('#paid').text("yes");
+    }, function(res) {
+      console.log('Response: ', res)
+      alert("Got error when tried to pay")
+    })
+
+  })
+</script>

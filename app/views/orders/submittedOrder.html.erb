@@ -1,0 +1,20 @@
+<div class="row">
+	<ul>
+		<h3>You have <%= @orders.length %> submitted order.</h3>
+		<%= will_paginate @orders %>
+		<% @orders.each do |order| %>
+			<li>
+				<span>Table :<%= order.table.no%></span>
+				<span>Book time :<%= order.book_time%></span>
+				<span><%= order.order_items.count %> items</span>
+				<span class="timestamp">
+					| Submitted <%= time_ago_in_words(order.created_at) %> ago.
+				</span>
+				<span>| Paid?: <%= order.paid ? "yes" : "no" %></span>
+				<span><%= link_to "Detail", "/users/#{params[:id]}/orders/#{order.id}" %></span>
+				<span><%= link_to 'Destroy', "#" %></span>
+			</li>
+		<% end %>
+		<%= will_paginate @orders %>
+	</ul>
+</div>

@@ -1,0 +1,14 @@
+<li >
+  <% menu_item = MenuItem.find(f.object.menu_item_id) %>
+  <%= image_tag menu_item.image_url(:thumb).to_s %>
+  <span>Name: <%= menu_item.name %></span>
+  <span>| Price: <%= menu_item.price %></span>
+  <%= f.hidden_field :id, value: f.object.id %>
+  <%= f.hidden_field :menu_item_id, value: f.object.menu_item_id %>
+  <%= f.hidden_field :temp_order_id, value: f.object.temp_order_id %>
+  <span>| Quantity :</span>
+  <%= f.number_field :quantity %>
+  <span><%= link_to 'Delete', destroy_temp_order_item_path(f.object), 
+                              method: :delete, data: { confirm: 'Are you sure?' } %></span>
+
+</li>

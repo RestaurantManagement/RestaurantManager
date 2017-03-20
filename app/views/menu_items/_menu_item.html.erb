@@ -11,7 +11,13 @@
   <span><%= link_to 'Edit', edit_menu_item_path(menu_item) %></span>
   <span><%= link_to 'Destroy', menu_item, method: :delete, data: { confirm: 'Are you sure?' } %></span>
   <% end %>
-  <% if logged_in? %>
-  <span><%= link_to 'Order', "#" %></span>
+  <% if logged_in? && !admin_user? %>
+  <% order_item = TempOrderItem.new %>
+    <%= form_for order_item, as: :order_item, url: create_order_item_path do |f| %>
+      <%= f.hidden_field :path, value: request.fullpath %>
+      <%= f.hidden_field :menu_item_id, value: menu_item.id %>
+      <%= f.hidden_field :menu_item_name, value: menu_item.name %>
+      <%= f.submit "Order"%>
+    <% end %>
   <% end %>
 </li>

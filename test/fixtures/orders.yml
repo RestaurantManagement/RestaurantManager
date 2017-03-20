@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  table: one
+  book_time: 2017-03-20 09:00:15
+
+two:
+  user: two
+  table: two
+  book_time: 2017-03-20 09:00:15

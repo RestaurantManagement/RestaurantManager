@@ -1,5 +1,8 @@
 class MenuItem < ApplicationRecord
+	#relations:
+	has_many :temp_order_items
   belongs_to :category
+  #
   default_scope -> { order(created_at: :desc) }
   #validates attributes
   validates :category_id, presence: true

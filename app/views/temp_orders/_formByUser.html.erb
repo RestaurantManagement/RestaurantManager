@@ -1,0 +1,57 @@
+<% if update %>
+  <% btnVal = "Save your pre-order" %>
+<% else %>
+  <% btnVal = "Create your pre-order" %>
+<% end %>
+<%= form_for temp_order, url: form[:path], method: form[:method] do |f| %>
+  <% if temp_order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(temp_order.errors.count, "error") %> prohibited this temp_order from being saved:</h2>
+
+      <ul>
+      <% temp_order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <% if temp_order.temp_order_items.any? %>
+      <h3>Order items (<%= temp_order.temp_order_items.count %>)</h3>
+      <ul>
+        <%= f.fields_for :temp_order_items do |itemf| %>
+          <%= render "temp_order_items/temp_order_item", f: itemf %>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
+  <%= f.hidden_field :user_id, value: temp_order.user_id %>
+
+  <div class="field">
+    <%= f.label :table_id %>
+    <%= f.select :table_id, options_for_select(tables, selected: current_table) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :book_time %>
+    <%= f.datetime_select :book_time, ampm: true, minute_step: 15 %>
+  </div>
+  
+  <div class="field">
+    <h4>Total price : <%= f.object.total_price %></h4>
+  </div>
+  <div class="actions">
+    <%= submit_tag btnVal, name: 'create_or_update' %>
+    <% if update %>
+      <%= submit_tag "Submit", name: 'submit' %>
+    <% else %>
+      <%= submit_tag "Book table", name: 'book_table' %>
+    <% end %>
+  </div>
+<% end %>
+<% if update %>
+  <%= form_for temp_order, url: "/temp_orders/#{temp_order.id}/clear", method: :delete do |f| %>
+    <%= f.submit "Clear" %>
+  <% end %>
+<% end %>
