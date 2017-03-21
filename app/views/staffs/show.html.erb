@@ -1,0 +1,22 @@
+<% provide(:title, @staff.content) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="staff_info">
+      <h1>
+        <%= @staff.content %>
+      </h1>
+    </section>
+  </aside>
+  <div class="col-md-8">
+    <% if @staff.info_staffs.any? %>
+      <h3>List of Staffs (<%= @staff.info_staffs.count %>)</h3>
+      <ol class="info_staffs">
+        <%= render @info_staffs %>
+      </ol>
+      <%= will_paginate @info_staffs %>
+    <% end %>
+  </div>
+</div>
+
+<%= link_to 'Edit', edit_staff_path(@staff) %> |
+<%= link_to 'Back', staffs_path %>

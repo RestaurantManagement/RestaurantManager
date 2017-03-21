@@ -1,0 +1,16 @@
+<% provide(:title, "List of Staffs") %>
+
+<div class="row">
+<% @staffs.each_with_index do |staff, index| %>
+  
+    <div class="col-md-4">
+      <a href=<%= "list/#{staff.id}" %> >
+        <h2><%= staff.content %></h2>
+        <%= image_tag staff.image, width: "360px", height: "180px" %>
+      </a>
+    </div>
+ 
+<% end %>
+ </div>
+
+

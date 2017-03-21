@@ -1,0 +1,47 @@
+
+<%= form_for info_staff, html: {multipart: true}  do |f| %>
+  <% if info_staff.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(info_staff.errors.count, "error") %> prohibited this info_staff from being saved:</h2>
+
+      <ul>
+      <% info_staff.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :age %>
+    <%= f.number_field :age %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nationality %>
+    <%= f.text_field :nation %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Staff_id %>
+    <%= f.text_field :Staff_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+  <div class="actions">
+    <%= f.submit " Create" %>
+  </div>
+<% end %>

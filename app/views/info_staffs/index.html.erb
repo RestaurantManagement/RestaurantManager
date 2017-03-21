@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>List of Staffs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Nation</th>
+      <th>Description</th>
+      <th>Type of Job</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @info_staffs.each do |info_staff| %>
+      <tr>
+        <td><%= info_staff.name %></td>
+        <td><%= info_staff.age %></td>
+        <td><%= info_staff.nation %></td>
+        <td><%= info_staff.description %></td>
+        <td><%= info_staff.staff %></td>
+        <td><%= link_to 'Show', info_staff %></td>
+        <td><%= link_to 'Edit', edit_info_staff_path(info_staff) %></td>
+        <td><%= link_to 'Destroy', info_staff, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New staff', new_info_staff_path %>

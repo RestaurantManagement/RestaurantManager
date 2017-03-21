@@ -10,13 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170320124506) do
+ActiveRecord::Schema.define(version: 20170321022752) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "image"
+  end
+
+  create_table "info_staffs", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "age"
+    t.string   "nation"
+    t.text     "description"
+    t.string   "image"
+    t.integer  "Staff_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["Staff_id", "created_at"], name: "index_info_staffs_on_staff_id_and_created_at"
+    t.index ["Staff_id"], name: "index_info_staffs_on_Staff_id"
   end
 
   create_table "menu_items", force: :cascade do |t|
@@ -50,6 +63,13 @@ ActiveRecord::Schema.define(version: 20170320124506) do
     t.boolean  "paid"
     t.index ["table_id"], name: "index_orders_on_table_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
+  end
+
+  create_table "staffs", force: :cascade do |t|
+    t.string   "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "image"
   end
 
   create_table "tables", force: :cascade do |t|

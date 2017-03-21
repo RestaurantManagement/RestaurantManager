@@ -1,0 +1,15 @@
+<li id="info_staff-<%= info_staff.id %>">
+  <%= image_tag info_staff.image_url(:thumb) %>
+  <span class="name">Name :<%= info_staff.name %></span>
+  <span class="age">| Age: <%= info_staff.age %></span>
+   <span class="nation">| Nationality: <%= info_staff.nation %></span>
+  <span class="description">| Description: <%= info_staff.description %></span>
+  <span class="timestamp">
+    | Posted <%= time_ago_in_words(info_staff.created_at) %> ago.
+  </span>
+  <span><%= link_to "Show", info_staff %></span>
+  <% if admin_user? %>
+  <span><%= link_to 'Edit', edit_info_staff_path(info_staff) %></span>
+  <span><%= link_to 'Destroy', info_staff, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+  <% end %>
+</li>

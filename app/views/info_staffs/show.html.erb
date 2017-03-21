@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<h2>
+  <strong>Name:</strong>
+  <%= @info_staff.name %>
+</h2>
+
+<%= image_tag @info_staff.image, class: "show-item" %>
+
+<p>
+  <strong>Age::</strong>
+  <%= @info_staff.age %>
+</p>
+
+<p>
+  <strong>Nationality::</strong>
+  <%= @info_staff.nation %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @info_staff.description %>
+</p>
+
+<%= link_to 'Edit', edit_info_staff_path(@info_staff) %> |
+<%= link_to 'Back', list_path %>

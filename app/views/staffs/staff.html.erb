@@ -1,0 +1,10 @@
+<% provide(:title, @staff.content) %>
+
+<div class="row">
+	<h3><%= @staff.content %></h3>
+	<% if @staff.info_staffs.any? %>
+		<h4>List of Staffs (<%= @staff.info_staffs.count %>)</h4>
+		<%= render @info_staffs%>
+		<%= will_paginate @info_staffs %>
+	<% end %>
+</div>

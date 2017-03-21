@@ -12,6 +12,7 @@ User.create!(name:  "hieuvecto",
              password_confirmation: "123abc",
              admin: true)
 
+
 99.times do |n|
   name  = Faker::Name.name
   email = "example-#{n+1}@railstutorial.org"
@@ -22,19 +23,3 @@ User.create!(name:  "hieuvecto",
                password_confirmation: password)
 end
 
-Category.create!(content: "Food")
-Category.create!(content: "Drink")
-
-50.times do |n|
-  name = "Food #{n}"
-  MenuItem.create!(name: name,
-                   price: n,
-                   category_id: 1)
-end
-
-70.times do |n|
-  name = "Drink #{n}"
-  MenuItem.create!(name: name,
-                   price: n,
-                   category_id: 2)
-end

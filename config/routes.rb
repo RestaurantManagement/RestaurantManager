@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
- 
+  get 'info_staffs/new'
+
+  get 'staffs/new'
+
   root 'static_pages#home'	
   get  '/about',   to: 'static_pages#about'
   get  '/signup',  to: 'users#new'
@@ -28,6 +31,17 @@ Rails.application.routes.draw do
   get   '/users/:uid/orders/:id', to: 'orders#detail_order', as: 'detailOrder'
   post  '/orders/:id/pay', to: 'orders#pay', as: 'payOrder'
   #built-in resource routes
+
+
+
+  get   '/info_staffs/:id/new', to: 'info_staffs#newByStaff', as: 'new_info_staff_by_staff'
+  get   '/list', to: 'staffs#list' 
+  get   '/list/:id' , to:'staffs#staff' ,as: 'staff_items' 
+  #get   'list/:id' ,to: 
+
+
+  #built-in resources routes
+
   resources :users
   resources :categories
   resources :menu_items, only: [:new, :show, :create, :edit, :update, :destroy]
@@ -35,4 +49,7 @@ Rails.application.routes.draw do
   resources :orders, except: :new
   resources :tables
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  resources :staffs
+  resources :info_staffs,only: [:new,:show,:create,:edit,:update,:destroy]
 end
