@@ -27809,3 +27809,879 @@ Processing by CategoriesController#menu as HTML
 Completed 200 OK in 78ms (Views: 73.6ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-03-21 08:30:45 +0700
+Started GET "/" for 127.0.0.1 at 2017-03-21 08:30:45 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (8.6ms)
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (133.5ms)
+Completed 200 OK in 18806ms (Views: 18793.4ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (66.1ms)
+Completed 200 OK in 18826ms (Views: 18801.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/menu" for 127.0.0.1 at 2017-03-21 08:31:09 +0700
+Processing by CategoriesController#menu as HTML
+  Rendering categories/menu.html.erb within layouts/application
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/menu.html.erb within layouts/application (22.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (5.1ms)
+Completed 200 OK in 194ms (Views: 165.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-03-21 08:31:13 +0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (821.0ms)
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (8.3ms)
+Completed 200 OK in 1000ms (Views: 993.8ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-03-21 08:31:16 +0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ww+POPk0NCmQuCneXaq3ECLyqU5i/3cqMvrlTJr3IYgxjTfeoy+nintKmmeOf9q4zcbOKP1oe1tXSwDvhb/InA==", "session"=>{"email"=>"huannguyenvanhipe2012@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "huannguyenvanhipe2012@gmail.com"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.6ms)
+Completed 200 OK in 178ms (Views: 147.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-03-21 08:31:23 +0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0snhsL+DBVp0zxkBdqRGwH3K+WFRv6Un5lG1HPIE7BKnE0FMhVP/V2W2TURpL+X67rCwZ4dj3VWrCWHS3xI7WQ==", "session"=>{"email"=>"huannguyenvanhipe2012@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "huannguyenvanhipe2012@gmail.com"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (8.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (4.8ms)
+Completed 200 OK in 165ms (Views: 161.3ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-03-21 08:31:27 +0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CsiMWFjwNPTwB9JwH+owsobKmkoObB8/nUPeXsdVnBV/EiykYiDO+eF+hjUAYZOIFbDTTNiwZ03QGwqQ6kNLXg==", "session"=>{"email"=>"huannguyenvan.dut@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (12.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "huannguyenvan.dut@gmail.com"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (7.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (5.6ms)
+Completed 200 OK in 236ms (Views: 219.5ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2017-03-21 08:31:29 +0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (15.6ms)
+  Rendered users/new.html.erb within layouts/application (21.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (14.4ms)
+Completed 200 OK in 185ms (Views: 152.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-03-21 08:31:49 +0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0K1Ba2XUso+rSOCd7EqGvvoPT5PSEyoEJcuATvjHwXGYRrsp0zDUQzJFJCCbjPUB7z87TFS0B6sMljs88cnIdg==", "user"=>{"name"=>"Huy", "email"=>"nvhuan.dut@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "nvhuan.dut@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Huy"], ["email", "nvhuan.dut@gmail.com"], ["created_at", 2017-03-21 01:31:50 UTC], ["updated_at", 2017-03-21 01:31:50 UTC], ["password_digest", "$2a$10$iXDpuGBflOCBSNDOB.Eu5uV24w4R.fJGc9R.u5FDUnXPK2ilswPVa"]]
+  [1m[35m (70.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/users/103
+Completed 302 Found in 249ms (ActiveRecord: 71.2ms)
+
+
+Started GET "/users/103" for 127.0.0.1 at 2017-03-21 08:31:50 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"103"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_header.html.erb (2.8ms)
+Completed 200 OK in 98ms (Views: 87.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/103/temp_order" for 127.0.0.1 at 2017-03-21 08:31:54 +0700
+Processing by TempOrdersController#newByUser as HTML
+  Parameters: {"id"=>"103"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  [1m[36mTempOrder Load (0.2ms)[0m  [1m[34mSELECT  "temp_orders".* FROM "temp_orders" WHERE "temp_orders"."user_id" = ? LIMIT ?[0m  [["user_id", 103], ["LIMIT", 1]]
+  [1m[36mTable Load (0.4ms)[0m  [1m[34mSELECT "tables".* FROM "tables"[0m
+  Rendering temp_orders/newByUser.html.erb within layouts/application
+  Rendered temp_orders/_formByUser.html.erb (20.6ms)
+  Rendered temp_orders/newByUser.html.erb within layouts/application (22.8ms)
+  Rendered layouts/_header.html.erb (3.6ms)
+Completed 200 OK in 224ms (Views: 124.0ms | ActiveRecord: 4.3ms)
+
+
+Started POST "/temp_orders" for 127.0.0.1 at 2017-03-21 08:32:02 +0700
+Processing by TempOrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9m/fXYndcz9ACNVi+NnOq8crf1zZRME9lYOQ7KcoFJ551/CyEyukIQoq9m9U6toPlHRaBBqHNPXERCv3I5aHIg==", "temp_order"=>{"user_id"=>"103", "table_id"=>"3", "book_time(1i)"=>"2017", "book_time(2i)"=>"3", "book_time(3i)"=>"21", "book_time(4i)"=>"01", "book_time(5i)"=>"00"}, "create_or_update"=>"Create your pre-order"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  [1m[36mTable Load (0.3ms)[0m  [1m[34mSELECT  "tables".* FROM "tables" WHERE "tables"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "temp_orders" ("user_id", "table_id", "created_at", "updated_at", "book_time") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 103], ["table_id", 3], ["created_at", 2017-03-21 01:32:02 UTC], ["updated_at", 2017-03-21 01:32:02 UTC], ["book_time", 2017-03-21 01:00:00 UTC]]
+  [1m[35m (112.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/users/103/temp_order
+Completed 302 Found in 162ms (ActiveRecord: 114.3ms)
+
+
+Started GET "/users/103/temp_order" for 127.0.0.1 at 2017-03-21 08:32:02 +0700
+Processing by TempOrdersController#newByUser as HTML
+  Parameters: {"id"=>"103"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  [1m[36mTempOrder Load (0.3ms)[0m  [1m[34mSELECT  "temp_orders".* FROM "temp_orders" WHERE "temp_orders"."user_id" = ? LIMIT ?[0m  [["user_id", 103], ["LIMIT", 1]]
+  [1m[36mTable Load (0.2ms)[0m  [1m[34mSELECT "tables".* FROM "tables"[0m
+  [1m[36mTable Load (0.3ms)[0m  [1m[34mSELECT  "tables".* FROM "tables" WHERE "tables"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering temp_orders/newByUser.html.erb within layouts/application
+  [1m[36mTempOrderItem Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "temp_order_items" WHERE "temp_order_items"."temp_order_id" = ? LIMIT ?[0m  [["temp_order_id", 11], ["LIMIT", 1]]
+  [1m[36mTempOrderItem Load (0.3ms)[0m  [1m[34mSELECT "temp_order_items".* FROM "temp_order_items" WHERE "temp_order_items"."temp_order_id" = ?[0m  [["temp_order_id", 11]]
+  Rendered temp_orders/_formByUser.html.erb (23.2ms)
+  Rendered temp_orders/newByUser.html.erb within layouts/application (28.0ms)
+  Rendered layouts/_header.html.erb (2.8ms)
+Completed 200 OK in 150ms (Views: 135.3ms | ActiveRecord: 2.4ms)
+
+
+Started PATCH "/temp_orders/11" for 127.0.0.1 at 2017-03-21 08:32:07 +0700
+Processing by TempOrdersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iYl0krD3Nuw1Kz2DuCqRoXlj0UfF1ALs9RlB5NNIL3b8U9RuiifM4SRSacanoTKb6hmYQRMIep64QZUq/l74PQ==", "temp_order"=>{"user_id"=>"103", "table_id"=>"3", "book_time(1i)"=>"2017", "book_time(2i)"=>"3", "book_time(3i)"=>"21", "book_time(4i)"=>"01", "book_time(5i)"=>"00"}, "submit"=>"Submit", "id"=>"11"}
+  [1m[36mTempOrder Load (0.8ms)[0m  [1m[34mSELECT  "temp_orders".* FROM "temp_orders" WHERE "temp_orders"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "temp_orders".* FROM "temp_orders" WHERE "temp_orders"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  [1m[36mTable Load (1.1ms)[0m  [1m[34mSELECT  "tables".* FROM "tables" WHERE "tables"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCACHE (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tables".* FROM "tables" WHERE "tables"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "table_id", "book_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 103], ["table_id", 3], ["book_time", 2017-03-21 01:00:00 UTC], ["created_at", 2017-03-21 01:32:07 UTC], ["updated_at", 2017-03-21 01:32:07 UTC]]
+  [1m[35m (76.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTempOrderItem Load (0.3ms)[0m  [1m[34mSELECT "temp_order_items".* FROM "temp_order_items" WHERE "temp_order_items"."temp_order_id" = ?[0m  [["temp_order_id", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "temp_orders" WHERE "temp_orders"."id" = ?[0m  [["id", 11]]
+  [1m[35m (81.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/users/103/temp_order
+Completed 302 Found in 251ms (ActiveRecord: 164.7ms)
+
+
+Started GET "/users/103/temp_order" for 127.0.0.1 at 2017-03-21 08:32:08 +0700
+Processing by TempOrdersController#newByUser as HTML
+  Parameters: {"id"=>"103"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  [1m[36mTempOrder Load (0.4ms)[0m  [1m[34mSELECT  "temp_orders".* FROM "temp_orders" WHERE "temp_orders"."user_id" = ? LIMIT ?[0m  [["user_id", 103], ["LIMIT", 1]]
+  [1m[36mTable Load (0.3ms)[0m  [1m[34mSELECT "tables".* FROM "tables"[0m
+  Rendering temp_orders/newByUser.html.erb within layouts/application
+  Rendered temp_orders/_formByUser.html.erb (11.4ms)
+  Rendered temp_orders/newByUser.html.erb within layouts/application (14.8ms)
+  Rendered layouts/_header.html.erb (3.9ms)
+Completed 200 OK in 147ms (Views: 134.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/temp_orders" for 127.0.0.1 at 2017-03-21 08:32:12 +0700
+Processing by TempOrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3oOlACjojPdvmZswzZvh8CjdFQBuZxgFSKv1HnXalTurWQX8Ejh2+n7gz3XSEELKu6dcBri7YHcF8yHQWMxCcA==", "temp_order"=>{"user_id"=>"103", "table_id"=>"3", "book_time(1i)"=>"2017", "book_time(2i)"=>"3", "book_time(3i)"=>"21", "book_time(4i)"=>"01", "book_time(5i)"=>"00"}, "book_table"=>"Book table"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  [1m[36mTable Load (0.4ms)[0m  [1m[34mSELECT  "tables".* FROM "tables" WHERE "tables"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "temp_orders" ("user_id", "table_id", "created_at", "updated_at", "book_time") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 103], ["table_id", 3], ["created_at", 2017-03-21 01:32:12 UTC], ["updated_at", 2017-03-21 01:32:12 UTC], ["book_time", 2017-03-21 01:00:00 UTC]]
+  [1m[35m (66.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  [1m[36mTable Load (0.2ms)[0m  [1m[34mSELECT  "tables".* FROM "tables" WHERE "tables"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "table_id", "book_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 103], ["table_id", 3], ["book_time", 2017-03-21 01:00:00 UTC], ["created_at", 2017-03-21 01:32:12 UTC], ["updated_at", 2017-03-21 01:32:12 UTC]]
+  [1m[35m (65.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTempOrderItem Load (0.3ms)[0m  [1m[34mSELECT "temp_order_items".* FROM "temp_order_items" WHERE "temp_order_items"."temp_order_id" = ?[0m  [["temp_order_id", 12]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "temp_orders" WHERE "temp_orders"."id" = ?[0m  [["id", 12]]
+  [1m[35m (68.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/users/103/temp_order
+Completed 302 Found in 242ms (ActiveRecord: 203.5ms)
+
+
+Started GET "/users/103/temp_order" for 127.0.0.1 at 2017-03-21 08:32:12 +0700
+Processing by TempOrdersController#newByUser as HTML
+  Parameters: {"id"=>"103"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  [1m[36mTempOrder Load (0.4ms)[0m  [1m[34mSELECT  "temp_orders".* FROM "temp_orders" WHERE "temp_orders"."user_id" = ? LIMIT ?[0m  [["user_id", 103], ["LIMIT", 1]]
+  [1m[36mTable Load (0.7ms)[0m  [1m[34mSELECT "tables".* FROM "tables"[0m
+  Rendering temp_orders/newByUser.html.erb within layouts/application
+  Rendered temp_orders/_formByUser.html.erb (15.1ms)
+  Rendered temp_orders/newByUser.html.erb within layouts/application (18.6ms)
+  Rendered layouts/_header.html.erb (5.2ms)
+Completed 200 OK in 151ms (Views: 139.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/103/orders" for 127.0.0.1 at 2017-03-21 08:32:20 +0700
+Processing by OrdersController#submittedOrder as HTML
+  Parameters: {"id"=>"103"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendering orders/submittedOrder.html.erb within layouts/application
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."user_id" = ? ORDER BY "orders"."created_at" DESC LIMIT ? OFFSET ?[0m  [["user_id", 103], ["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mTable Load (0.2ms)[0m  [1m[34mSELECT  "tables".* FROM "tables" WHERE "tables"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "order_items" WHERE "order_items"."order_id" = ?[0m  [["order_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tables".* FROM "tables" WHERE "tables"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "order_items" WHERE "order_items"."order_id" = ?[0m  [["order_id", 3]]
+  Rendered orders/submittedOrder.html.erb within layouts/application (37.4ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 131ms (Views: 120.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/menu" for 127.0.0.1 at 2017-03-21 08:32:23 +0700
+Processing by CategoriesController#menu as HTML
+  Rendering categories/menu.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/menu.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.7ms)
+Completed 200 OK in 85ms (Views: 82.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/menu/5" for 127.0.0.1 at 2017-03-21 08:32:25 +0700
+Processing by CategoriesController#category as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering categories/category.html.erb within layouts/application
+  [1m[36mMenuItem Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."category_id" = ? LIMIT ?[0m  [["category_id", 5], ["LIMIT", 1]]
+  Rendered categories/category.html.erb within layouts/application (6.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.3ms)
+Completed 200 OK in 107ms (Views: 80.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/menu/3" for 127.0.0.1 at 2017-03-21 08:32:27 +0700
+Processing by CategoriesController#category as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering categories/category.html.erb within layouts/application
+  [1m[36mMenuItem Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."category_id" = ? LIMIT ?[0m  [["category_id", 3], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "menu_items" WHERE "menu_items"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[36mMenuItem Load (0.2ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."category_id" = ? ORDER BY "menu_items"."created_at" DESC LIMIT ? OFFSET ?[0m  [["category_id", 3], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered collection of menu_items/_menu_item.html.erb [1 times] (17.8ms)
+  Rendered categories/category.html.erb within layouts/application (44.7ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+Completed 200 OK in 144ms (Views: 135.1ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/temp_order_items" for 127.0.0.1 at 2017-03-21 08:32:30 +0700
+Processing by TempOrderItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i4dYy/++EJe5vtmnjMWKv3chHhDSW9Ff6zfxe9V3/vU8VcyWBL5SbjWdBCOMm2wQG7QKyv+SevWNQgRi6CbZ6g==", "order_item"=>{"path"=>"/menu/3", "menu_item_id"=>"123", "menu_item_name"=>"Ca vien chien"}, "commit"=>"Order"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  [1m[36mTempOrder Load (0.2ms)[0m  [1m[34mSELECT  "temp_orders".* FROM "temp_orders" WHERE "temp_orders"."user_id" = ? LIMIT ?[0m  [["user_id", 103], ["LIMIT", 1]]
+  [1m[36mTable Load (0.4ms)[0m  [1m[34mSELECT  "tables".* FROM "tables" ORDER BY "tables"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  [1m[36mTable Load (0.4ms)[0m  [1m[34mSELECT  "tables".* FROM "tables" WHERE "tables"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "temp_orders" ("user_id", "table_id", "created_at", "updated_at", "book_time") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 103], ["table_id", 3], ["created_at", 2017-03-21 01:32:30 UTC], ["updated_at", 2017-03-21 01:32:30 UTC], ["book_time", 2017-03-21 01:32:30 UTC]]
+  [1m[35m (51.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMenuItem Load (0.3ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = ? ORDER BY "menu_items"."created_at" DESC LIMIT ?[0m  [["id", 123], ["LIMIT", 1]]
+  [1m[36mTempOrder Load (0.3ms)[0m  [1m[34mSELECT  "temp_orders".* FROM "temp_orders" WHERE "temp_orders"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "temp_order_items" ("menu_item_id", "quantity", "created_at", "updated_at", "temp_order_id") VALUES (?, ?, ?, ?, ?)[0m  [["menu_item_id", 123], ["quantity", 1], ["created_at", 2017-03-21 01:32:30 UTC], ["updated_at", 2017-03-21 01:32:30 UTC], ["temp_order_id", 13]]
+  [1m[35m (65.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/menu/3
+Completed 302 Found in 175ms (ActiveRecord: 123.1ms)
+
+
+Started GET "/menu/3" for 127.0.0.1 at 2017-03-21 08:32:30 +0700
+Processing by CategoriesController#category as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering categories/category.html.erb within layouts/application
+  [1m[36mMenuItem Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."category_id" = ? LIMIT ?[0m  [["category_id", 3], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "menu_items" WHERE "menu_items"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."category_id" = ? ORDER BY "menu_items"."created_at" DESC LIMIT ? OFFSET ?[0m  [["category_id", 3], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered collection of menu_items/_menu_item.html.erb [1 times] (6.9ms)
+  Rendered categories/category.html.erb within layouts/application (19.4ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+Completed 200 OK in 137ms (Views: 128.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/103/temp_order" for 127.0.0.1 at 2017-03-21 08:32:35 +0700
+Processing by TempOrdersController#newByUser as HTML
+  Parameters: {"id"=>"103"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  [1m[36mTempOrder Load (0.3ms)[0m  [1m[34mSELECT  "temp_orders".* FROM "temp_orders" WHERE "temp_orders"."user_id" = ? LIMIT ?[0m  [["user_id", 103], ["LIMIT", 1]]
+  [1m[36mTable Load (0.4ms)[0m  [1m[34mSELECT "tables".* FROM "tables"[0m
+  [1m[36mTable Load (0.2ms)[0m  [1m[34mSELECT  "tables".* FROM "tables" WHERE "tables"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering temp_orders/newByUser.html.erb within layouts/application
+  [1m[36mTempOrderItem Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "temp_order_items" WHERE "temp_order_items"."temp_order_id" = ? LIMIT ?[0m  [["temp_order_id", 13], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "temp_order_items" WHERE "temp_order_items"."temp_order_id" = ?[0m  [["temp_order_id", 13]]
+  [1m[36mTempOrderItem Load (0.4ms)[0m  [1m[34mSELECT "temp_order_items".* FROM "temp_order_items" WHERE "temp_order_items"."temp_order_id" = ?[0m  [["temp_order_id", 13]]
+  [1m[36mMenuItem Load (0.8ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = ? ORDER BY "menu_items"."created_at" DESC LIMIT ?[0m  [["id", 123], ["LIMIT", 1]]
+  Rendered temp_order_items/_temp_order_item.html.erb (17.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = ? ORDER BY "menu_items"."created_at" DESC LIMIT ?[0m  [["id", 123], ["LIMIT", 1]]
+  Rendered temp_orders/_formByUser.html.erb (38.5ms)
+  Rendered temp_orders/newByUser.html.erb within layouts/application (41.2ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+Completed 200 OK in 132ms (Views: 118.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 08:32:38 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.9ms)
+Completed 200 OK in 89ms (Views: 87.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 09:10:47 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1176.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (82.7ms)
+Completed 200 OK in 1973ms (Views: 1939.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 09:12:52 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (6.7ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (4.8ms)
+Completed 200 OK in 3171ms (Views: 3166.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 09:13:32 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (6.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (5.1ms)
+Completed 200 OK in 179ms (Views: 177.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 09:16:33 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (5.4ms)
+Completed 200 OK in 2977ms (Views: 2972.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 09:24:13 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (4.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (5.8ms)
+Completed 200 OK in 4228ms (Views: 4223.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 09:25:20 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (11.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (4.0ms)
+Completed 200 OK in 4632ms (Views: 4628.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 09:25:57 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (5.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (4.7ms)
+Completed 200 OK in 170ms (Views: 168.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 09:26:00 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (4.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (7.4ms)
+Completed 200 OK in 198ms (Views: 195.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 09:27:06 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (4.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (4.2ms)
+Completed 200 OK in 5096ms (Views: 5094.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 09:28:48 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (5.2ms)
+Completed 200 OK in 3275ms (Views: 3208.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 09:29:54 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (6.8ms)
+Completed 200 OK in 3835ms (Views: 3832.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 09:31:07 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (4.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (4.0ms)
+Completed 200 OK in 3217ms (Views: 3214.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 09:31:41 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.2ms)
+Completed 200 OK in 3814ms (Views: 3805.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 09:35:38 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (820.8ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (39.8ms)
+Completed 200 OK in 1089ms (Views: 1066.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 09:36:31 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (5.7ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 105ms (Views: 102.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 09:37:14 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (4.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (5.2ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 2995ms (Views: 2992.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 09:37:20 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (7.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.3ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 152ms (Views: 147.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 09:39:14 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 194ms (Views: 191.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 09:40:01 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (7.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (5.0ms)
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 172ms (Views: 168.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 09:51:27 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (6.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (39.5ms)
+  Rendered layouts/_footer.html.erb (1.8ms)
+Completed 200 OK in 345ms (Views: 340.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-03-21 09:51:31 +0700
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (233.8ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (5.1ms)
+  Rendered layouts/_footer.html.erb (1.9ms)
+Completed 200 OK in 378ms (Views: 375.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 09:51:59 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (8.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (4.3ms)
+  Rendered layouts/_footer.html.erb (1.7ms)
+Completed 200 OK in 184ms (Views: 181.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/menu" for 127.0.0.1 at 2017-03-21 09:52:01 +0700
+Processing by CategoriesController#menu as HTML
+  Rendering categories/menu.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/menu.html.erb within layouts/application (9.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 131ms (Views: 94.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/menu" for 127.0.0.1 at 2017-03-21 09:52:08 +0700
+Processing by CategoriesController#menu as HTML
+  Rendering categories/menu.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/menu.html.erb within layouts/application (10.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (5.0ms)
+  Rendered layouts/_footer.html.erb (2.0ms)
+Completed 200 OK in 167ms (Views: 163.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 09:52:09 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (7.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (5.2ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 172ms (Views: 169.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 09:52:53 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (10.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 2554ms (Views: 2551.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/menu" for 127.0.0.1 at 2017-03-21 09:52:57 +0700
+Processing by CategoriesController#menu as HTML
+  Rendering categories/menu.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/menu.html.erb within layouts/application (5.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 84ms (Views: 81.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 09:53:02 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (3.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.8ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 104ms (Views: 102.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 09:58:00 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (804.9ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (54.9ms)
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 1119ms (Views: 1096.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2017-03-21 09:58:04 +0700
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (4.5ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 126ms (Views: 122.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 09:58:12 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (5.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (4.1ms)
+  Rendered layouts/_footer.html.erb (1.3ms)
+Completed 200 OK in 144ms (Views: 141.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 10:01:05 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (13.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (9.7ms)
+  Rendered layouts/_footer.html.erb (2.2ms)
+Completed 200 OK in 3573ms (Views: 3569.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 10:01:33 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (11.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 192ms (Views: 189.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/menu" for 127.0.0.1 at 2017-03-21 10:01:34 +0700
+Processing by CategoriesController#menu as HTML
+  Rendering categories/menu.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/menu.html.erb within layouts/application (21.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (6.7ms)
+  Rendered layouts/_footer.html.erb (1.7ms)
+Completed 200 OK in 170ms (Views: 148.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/menu" for 127.0.0.1 at 2017-03-21 10:01:35 +0700
+Processing by CategoriesController#menu as HTML
+  Rendering categories/menu.html.erb within layouts/application
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/menu.html.erb within layouts/application (7.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (4.1ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 146ms (Views: 143.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 10:01:36 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (5.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (7.0ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 195ms (Views: 192.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 10:13:48 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (3.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.6ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 2653ms (Views: 2650.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/menu" for 127.0.0.1 at 2017-03-21 10:14:02 +0700
+Processing by CategoriesController#menu as HTML
+  Rendering categories/menu.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/menu.html.erb within layouts/application (5.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 95ms (Views: 92.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 10:14:03 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 116ms (Views: 113.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 10:14:30 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (5.3ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 2878ms (Views: 2874.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/menu" for 127.0.0.1 at 2017-03-21 10:14:39 +0700
+Processing by CategoriesController#menu as HTML
+  Rendering categories/menu.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/menu.html.erb within layouts/application (12.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.1ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 97ms (Views: 94.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 10:14:40 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (4.3ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 128ms (Views: 125.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 10:17:42 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (4.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 3087ms (Views: 3083.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/menu" for 127.0.0.1 at 2017-03-21 10:17:47 +0700
+Processing by CategoriesController#menu as HTML
+  Rendering categories/menu.html.erb within layouts/application
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/menu.html.erb within layouts/application (10.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.1ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 111ms (Views: 101.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 10:17:49 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.6ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 144ms (Views: 141.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2017-03-21 10:19:59 +0700
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (4.8ms)
+  Rendered layouts/_footer.html.erb (1.5ms)
+Completed 200 OK in 4391ms (Views: 4374.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2017-03-21 10:20:03 +0700
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (10.9ms)
+  Rendered layouts/_footer.html.erb (2.0ms)
+Completed 200 OK in 232ms (Views: 229.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 10:20:06 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.3ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 95ms (Views: 92.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-03-21 10:20:09 +0700
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (33.5ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (6.0ms)
+  Rendered layouts/_footer.html.erb (1.3ms)
+Completed 200 OK in 223ms (Views: 208.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 10:20:17 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (5.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (4.3ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 132ms (Views: 128.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2017-03-21 10:20:50 +0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hcrHSWviTJBkJ897jPH/BbUj+Cpvul4RCam3T/Qyi8DwEGe1UTK2nXVemz6Telw/JlmxLLlmJmNE8WOB2SRciw=="}
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 10:20:50 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (4.1ms)
+  [1m[36mUser Load (9.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (15.2ms)
+  Rendered layouts/_footer.html.erb (1.3ms)
+Completed 200 OK in 126ms (Views: 114.0ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/menu" for 127.0.0.1 at 2017-03-21 10:20:59 +0700
+Processing by CategoriesController#menu as HTML
+  Rendering categories/menu.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/menu.html.erb within layouts/application (11.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.6ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 147ms (Views: 139.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-21 10:21:00 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.5ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 156ms (Views: 153.0ms | ActiveRecord: 0.2ms)
+
+
