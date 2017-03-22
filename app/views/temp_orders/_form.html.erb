@@ -11,22 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :user_id %>
-    <%= f.text_field :user_id %>
-  </div>
 
-  <div class="field">
-    <%= f.label :table_id %>
-    <%= f.text_field :table_id %>
-  </div>
+  <%= f.label :user_id %>
+  <%= f.text_field :user_id , class: 'form-control'%>
 
-  <div class="field">
-    <%= f.label :book_time %>
-    <%= f.datetime_select :book_time, ampm: true, minute_step: 15 %>
-  </div>
+  <%= f.label :table_id %>
+  <%= f.text_field :table_id , class: 'form-control'%>
+
+  <%= f.label :book_time %>
+  <%= f.datetime_select :book_time, ampm: true, minute_step: 15 %>
   
-  <div class="actions">
-    <%= f.submit %>
+  <div class="action-field">
+    <%= f.submit "Update", class: "margin-t-b-20px btn btn-submit btn-submit-lg"%>
   </div>
 <% end %>

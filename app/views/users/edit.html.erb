@@ -1,8 +1,17 @@
 <% provide(:title, "Edit user") %>
-<h1>Editing User</h1>
+<div class="config-min-height">
+	<div class="container form-bg align-center" >
+		<div class="form-wrapper">
+			<h1>Editing User</h1>
 
-<%= render 'form', user: @user %>
+			<%= render 'form', user: @user %>
 
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
-<div class="config"></div>
+			<div class="link-back-field" style="margin-bottom: 20px;">
+				<%= link_to 'Show', @user %> |
+				<%= link_to 'Back', users_path %>
+			</div>
+		</div>
+	</div>
+</div>
+
+

@@ -1,15 +1,20 @@
-<div class = "config2"></div>
-<p>
-	<%= gravatar_for @user %>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
+<div class="config-min-height row">
+	<div class="container form-bg align-center">
+		<%= gravatar_for @user, {size: 200, class: "avatar-lg margin-t-b-20px"} %>
+		<h2>
+			
+			<strong>Name:</strong>
+			<%= @user.name %>
+		</h2>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+		<h2 class="margin-t-b-20px">
+			<strong>Email:</strong>
+			<%= @user.email %>
+		</h2>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
-<div class = "config"></div>
+		<div class="link-back-field" style="margin-bottom: 20px;">
+		<%= link_to 'Edit', edit_user_path(@user) %> |
+		<%= link_to 'Back', users_path %>
+		</div>
+	</div>
+</div>

@@ -1,30 +1,22 @@
-<p id="notice"><%= notice %></p>
+<div class="row config-min-height">
+  <div class="container margin-top-bottom-std">
+    <h1 style="margin-bottom: 20px;">Categories</h1>
+    <section class="list-group-custom">
+      <div class="title-bar">
+        <p class="hidden-cus" style="width: 20%;">HIDDEN</p>
+        <p style="width: 60%">Content</p>
+      </div>
+      <ul class="list-group">
+        <%= render @categories %>
+      </ul>
+    </section>
+  </div>
+</div>
 
-<h1>Categories</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Content</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @categories.each do |category| %>
-      <tr>
-        <td><%= image_tag category.image_url(:thumb).to_s %></td>
-        <td><%= category.content %></td>
-        <td><%= link_to 'Show', category %></td>
-        <td><%= link_to 'New item', new_menu_item_by_category_path(category) %></td>
-        <td><%= link_to 'Edit', edit_category_path(category) %></td>
-        <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
 
-<%= link_to 'New Category', new_category_path %>
-<div class="config"></div>
+
+
+

@@ -1,0 +1,13 @@
+<li class="list-group-item no-image">
+
+  <div>
+    <p style="width: 10%;"><%= order.table.no%></p>
+    <p style="width: 28%;"><%= order.book_time%></p>
+    <p><%= order.order_items.count %></p>
+    <p><%= time_ago_in_words(order.created_at) %> ago.</p>
+    <p class="last-p"><%= order.paid ? "yes" : "no" %></p>
+    <%= link_to fa_icon("times 2x", class: "red-color i-no-image"), "#", 
+        method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to fa_icon("info 2x", class: "greenleaf-color i-no-image"), "/users/#{params[:id]}/orders/#{order.id}" %>
+  </div>
+</li>

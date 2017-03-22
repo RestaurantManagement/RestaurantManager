@@ -1,0 +1,13 @@
+<li class="list-group-item">
+
+  <div>
+    <p style="width: 20%;"><%= link_to image_tag(category.image_url(:thumb).to_s), category %></p>
+    <p style="width: 60%;"><%= category.content %></p>
+    <%= link_to fa_icon("times 2x", class: "red-color"), category, 
+        method: :delete, data: { confirm: 'Are you sure?' } %>
+    <a href=<%= new_menu_item_by_category_path(category) %> >
+      <i class="fa fa-pencil-square-o fa-2x black-color" ></i>
+    </a>
+  </div>
+</li>
+

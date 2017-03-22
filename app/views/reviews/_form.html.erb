@@ -11,18 +11,15 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="input-text-field">
     <%= f.label :raiting %>
-    <%= f.number_field :raiting %>
-  </div>
+    <%= f.number_field :raiting, class: "form-control" %>
 
-  <div class="field">
     <%= f.label :comment %>
-    <%= f.text_area :comment %>
+    <%= f.text_area :comment, class: "form-control" %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div class="action-field">
+    <%= f.submit "Create", class: "btn btn-submit margin-t-b-20px"%>
   </div>
 <% end %>
-<div class="config"></div>
