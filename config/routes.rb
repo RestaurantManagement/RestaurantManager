@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :reviews
   get 'info_staffs/new'
 
   get 'staffs/new'

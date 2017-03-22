@@ -2,6 +2,7 @@ class User < ApplicationRecord
 	#relations:
 	has_one :temp_order, dependent: :destroy
 	has_many :orders, dependent: :destroy
+	has_many :reviews, dependent: :destroy
 	#
 	before_save { self.email = email.downcase }
 	validates :name, presence: true, length: { maximum: 50 }
