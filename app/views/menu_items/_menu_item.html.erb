@@ -1,26 +1,27 @@
-
-<div class="config2"></div>
-<li id="menu_item-<%= menu_item.id %>">
-  <%= image_tag menu_item.image_url(:thumb).to_s %>
-  <span class="name">Name :<%= menu_item.name %></span>
-  <span class="price">| Price: <%= menu_item.price %></span>
-  <span class="description">| Description: <%= menu_item.description %></span>
-  <span class="timestamp">
-    | Posted <%= time_ago_in_words(menu_item.created_at) %> ago.
-  </span>
-  <span><%= link_to "Show", menu_item %></span>
-  <% if admin_user? %>
-  <span><%= link_to 'Edit', edit_menu_item_path(menu_item) %></span>
-  <span><%= link_to 'Destroy', menu_item, method: :delete, data: { confirm: 'Are you sure?' } %></span>
-  <% end %>
-  <% if logged_in? && !admin_user? %>
-  <% order_item = TempOrderItem.new %>
-    <%= form_for order_item, as: :order_item, url: create_order_item_path do |f| %>
-      <%= f.hidden_field :path, value: request.fullpath %>
-      <%= f.hidden_field :menu_item_id, value: menu_item.id %>
-      <%= f.hidden_field :menu_item_name, value: menu_item.name %>
-      <%= f.submit "Order"%>
+<li class="list-group-item">
+  <div>
+    <p><%= link_to image_tag(menu_item.image_url(:thumb).to_s), menu_item %></p>
+    <p><%= menu_item.name %></p>
+    <p><%= menu_item.price %>$</p>
+    <p><%= time_ago_in_words(menu_item.created_at) %> ago.</p>
+    <p class="hidden-cus last-p">HIDDEN</p>
+    <% if admin_user? %>
+    <%= link_to fa_icon("times 2x", class: "red-color"), menu_item, 
+        method: :delete, data: { confirm: 'Are you sure?' } %>
+    <a href=<%= edit_menu_item_path(menu_item) %> >
+      <i class="fa fa-pencil-square-o fa-2x black-color" ></i>
+    </a>
     <% end %>
-  <% end %>
+    <!--
+    <% if logged_in? && !admin_user? %>
+    <% order_item = TempOrderItem.new %>
+      <%= form_for order_item, as: :order_item, url: create_order_item_path do |f| %>
+        <%= f.hidden_field :path, value: request.fullpath %>
+        <%= f.hidden_field :menu_item_id, value: menu_item.id %>
+        <%= f.hidden_field :menu_item_name, value: menu_item.name %>
+        <%= f.submit "Order"%>
+      <% end %>
+    <% end %>-->
+  </div>
 </li>
-<div class="config"></div>
+

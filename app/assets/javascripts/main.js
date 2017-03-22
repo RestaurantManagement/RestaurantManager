@@ -27,10 +27,13 @@
 	});
  
 	function onScroll(event){
+		//console.log('Pre test')
 		var scrollPosition = $(document).scrollTop();
-		$('.nav li a').each(function () {
+		/*$('.nav li a').each(function () {
 			var currentLink = $(this);
+			console.log("currentLink: ", currentLink)
 			var refElement = $(currentLink.attr("href"));
+			
 			if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
 				$('ul.nav li a').removeClass("navactive");
 				currentLink.addClass("navactive");
@@ -38,7 +41,7 @@
 			else{
 				currentLink.removeClass("navactive");
 			}
-		});
+		});*/
 	
        
         $(function(){

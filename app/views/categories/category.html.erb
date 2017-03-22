@@ -1,10 +1,25 @@
 <% provide(:title, @category.content) %>
 
 <div class="row">
-	<h3><%= @category.content %></h3>
-	<% if @category.menu_items.any? %>
-		<h4>Menu items (<%= @category.menu_items.count %>)</h4>
-		<%= render @menu_items%>
-		<%= will_paginate @menu_items %>
-	<% end %>
+	<div class="container margin-top-bottom-std">
+		<h2 class="categories-title"><%= @category.content %></h2>
+		<% if @category.menu_items.any? %>
+			<h3>Menu items (<%= @category.menu_items.count %>)</h3>
+				<%= will_paginate @menu_items %>
+				<section class="list-group-custom">
+					<div class="title-bar">
+						<p class="hidden-cus">HIDDEN</p>
+						<p>Name</p>
+						<p>Price</p>
+						<p>Posted</p>
+						<p class="hidden-cus">HIDDEN</p>
+					</div>
+					<ul class="list-group">
+						<%= render @menu_items%>
+					</ul>
+				</section>
+				<%= will_paginate @menu_items %>
+		<% end %>
+	</div>
 </div>
+
