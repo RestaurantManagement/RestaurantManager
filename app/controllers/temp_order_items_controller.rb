@@ -7,7 +7,7 @@ class TempOrderItemsController < ApplicationController
   # POST /temp_order_items
   # POST /temp_order_items.json
   def create
-    pr = order_item_params
+    pr = params
     cu = current_user
     to = cu.temp_order
 
@@ -25,12 +25,10 @@ class TempOrderItemsController < ApplicationController
     end
 
     if item.save
-      flash[:success] = "Ordered item #{pr[:menu_item_name]} successfully."
+      render json: {status: "OK"}.to_json
     else
-      flash[:danger] = "Failed when Ordered item #{pr[:menu_item_name]}."
+      render json: {status: "ERROR"}.to_json, status: 404 
     end
-
-    redirect_to pr[:path]
   end
 
   # DELETE /temp_order_items/1
@@ -53,11 +51,6 @@ class TempOrderItemsController < ApplicationController
         flash[:danger] = "Uncorrect user."
         redirect_to(root_url) 
       end
-    end
-
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def order_item_params
-      params.require(:order_item).permit(:menu_item_id, :menu_item_name, :path)
     end
 
 end

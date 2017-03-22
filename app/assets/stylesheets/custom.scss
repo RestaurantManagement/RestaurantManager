@@ -1,16 +1,62 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
-h3, h4, p {
+$greenleaf: #1fa67b;
+$gray: #f1f1f1;
+h1, h2, h3, h4, p {
 	font-family: "museo-sans", helvetica, sans-serif;
     color: #2f2e2f;
+}
+
+.nav > li {
+	> a:hover, > a:focus {
+		background-color: transparent;
+	}
 }
 .transparent-bg {
 	background-color: transparent !important;
 }
+//form
+.form-bg {
+	background-color: $gray;
+	box-shadow: 0 0 3px rgba(0,0,0,.04), 0 1px 2px rgba(0,0,0,.15);
+    border-radius: 4px;
+    margin-bottom: 15px;
+    h1 {
+    	border: none;
+    	font-family: 'Pacifico', cursive;
+    	font-size: 40px !important;
+    	text-decoration: none;
+    }
 
+    h3 {
+    	font-size: 30px;
+    }
 
+}
 
+.select-field select {
+	text-align: center;
+	padding: 10px 15px;
+	font-size: 25px;
+}
+
+.action-field input {
+	text-align: center;
+	padding: 10px 15px;
+	font-size: 25px;
+}
+
+.btn-submit {
+	border: 5px solid transparent;
+	background-color: $greenleaf;
+	color: #fff;
+	font-weight: bold;
+}
+
+.input-number {
+	text-align: center;
+	width: 50%;
+}
 .config {
 	margin-top: 70px;
 }
@@ -21,6 +67,13 @@ h3, h4, p {
 	min-height:70px;
 }
 
+.align-center {
+	text-align: center;
+}
+
+.align-left {
+	text-align: left;
+}
 .drop-box {
 	background: #1E1E1E !important;
     font-size: 18px;
@@ -43,17 +96,23 @@ h3, h4, p {
 	margin-bottom: 30px;
 }
 
+.margin-t-b-20px {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
 .categories-title {
 	font-family: 'Pacifico', cursive;
 	margin-bottom: 15px;
 }
 
 .categories-a {
-	color: #000;
-	text-decoration: none;
-	:hover {
+	a {
+		color: #2f2e2f;
+		text-decoration: none;
+	}
+	a:hover, a:focus {
 		text-decoration: underline;
-		color: #000;
+		color: #2f2e2f !important;
 	}
 }
 
@@ -76,6 +135,7 @@ h3, h4, p {
 		float: right;
 		padding: 0 !important;
 		margin-top: 50px;
+		margin-right: 20px;
 	}
 
 	.red-color {
@@ -84,6 +144,10 @@ h3, h4, p {
 
 	.black-color {
 		color: #000 !important;
+	}
+
+	.pointer-cursor:hover {
+		cursor: pointer;
 	}
 }
 
@@ -97,7 +161,7 @@ h3, h4, p {
 	color: #fff;
     box-shadow: 0 0 3px rgba(0,0,0,.04), 0 1px 2px rgba(0,0,0,.15);
     border-radius: 4px;
-    background-color: #1fa67b;
+    background-color: $greenleaf;
     padding: 10px 15px;
     p {
 		color: #fff;

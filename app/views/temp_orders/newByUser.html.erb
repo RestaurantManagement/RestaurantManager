@@ -1,10 +1,11 @@
-<div class="config2"></div>
-<h1>New Temp Order By user</h1>
+<div class="row config-min-height">
+<div class="container align-center form-bg">
+<h1>Order form</h1>
 <% if @form[:method] == :patch %>
 	<% update = true %>
 <% end %>
 <%= render 'formByUser', temp_order: @temp_order, tables: @tables, current_table: @current_table,
 						 form: @form , temp_order_items: @temp_order_items, update: update %>
+</div>
 
-<%= link_to 'Back', temp_orders_path %>
-<div class="config"></div>
+</div>

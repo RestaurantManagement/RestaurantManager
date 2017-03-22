@@ -1,3 +1,24 @@
+<% home = "" 
+ menu = "" 
+ order = "" 
+ account = "" 
+ if logged_in?
+  orderpath = new_temp_order_by_user_path(current_user)
+ else
+  orderpath = "XXX"
+ end %>
+<% case request.fullpath 
+when "/"
+  home = " navactive"
+when "/menu"
+  menu = " navactive"
+when orderpath
+  order = " navactive"
+else 
+  account = " navactive"
+end
+%>
+}
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="row">
@@ -15,13 +36,13 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav main-nav  clear navbar-right ">
-          <li><%= link_to "HOME", root_path , class: "navactive color_animation" %></li>
-          <li><%= link_to "MENU", menu_path, class: "color_animation" %></li>
+          <li><%= link_to "HOME", root_path , class: "color_animation"+home %></li>
+          <li><%= link_to "MENU", menu_path, class: "color_animation"+menu %></li>
           <% if logged_in? %>
             <li><%= link_to("ORDER", new_temp_order_by_user_path(current_user), 
-                  class: "color_animation") if !admin_user? %></li>
+                  class: "color_animation"+order) if !admin_user? %></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle transparent-bg color_animation" 
+              <a href="#" class="dropdown-toggle transparent-bg color_animation<%= account %>" 
                   data-toggle="dropdown">
                 ACCOUNT <b class="caret"></b>
               </a>
