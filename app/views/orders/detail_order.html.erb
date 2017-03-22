@@ -1,26 +1,37 @@
-<div class="row">
-  <h2>Detail your submitted order created at <%= @order.created_at %></h2>
-  <h4>Table no: <%= @order.table.no %></h4>
-  <h4>Book time: <%= @order.book_time %></h4>
-  <h4>Total price: <%= @order.total_price %></h4>
-  <h4 id="paid">Paid? : <%= @order.paid ? "yes": "no" %></h4>
-  <% if admin_user? && !@order.paid %>
-    <button type="button" class="btn btn-default" id="btnPay">Pay</button>
-  <% end %>
-  <h4><%= @order.order_items.count %> items</h4>
-  <div class="row">
-    <ul>
-      <% @order.order_items.each do |item| %>
-        <% menu_item = item.menu_item %>
-        <li>
-          <%= image_tag menu_item.image_url(:thumb).to_s %>
-          <span>Name: <%= menu_item.name %></span>
-          <span>Unit price: <%= menu_item.price %></span>
-          <span>Quantity: <%= item.quantity %></span>
-          <span>Item price: <%= item.price %></span>
-        </li>
+<div class="row config-min-height">
+  <div class="container form-bg align-center">
+    <h1>Detail your submitted order</h1>
+    <h3>Created at <%= @order.created_at %></h3>
+    <h3>Table no: <%= @order.table.no %></h3>
+    <h3>Book time: <%= @order.book_time %></h3>
+    <h3>Total price: <%= @order.total_price %></h3>
+    <h3 id="paid">Paid? : <%= @order.paid ? "yes": "no" %></h3>
+    <% if admin_user? && !@order.paid %>
+      <button type="button" class="btn btn-submit" id="btnPay">Pay</button>
+    <% end %>
+    <div class="row">
+      <% if @order.order_items.any? 
+          @order_items = @order.order_items%>
+      <div class="container">
+        <h3>Order items (<%= @order.order_items.count %>)</h3>
+        <section class="list-group-custom align-left">
+          <div class="title-bar">
+            <p class="hidden-cus">HIDDEN</p>
+            <p>Name</p>
+            <p>Price</p>
+            <p>Quantity</p>
+            <p>Item price</p>
+          </div>
+          <ul class="list-group">
+            <%= render @order_items %>
+          </ul>
+        </section>
+      </div>
       <% end %>
-    </ul>
+    </div>
+    <div class="link-back-field">
+      <%= link_to "Back", "/users/#{current_user.id}/orders" %>
+    </div>
   </div>
 </div>
 

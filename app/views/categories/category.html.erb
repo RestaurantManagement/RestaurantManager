@@ -1,8 +1,16 @@
 <% provide(:title, @category.content) %>
-
 <div class="row">
 	<div class="container margin-top-bottom-std">
 		<h2 class="categories-title"><%= @category.content %></h2>
+		<div style="width: 30%; float: right;">
+		<form action="" class="search-form" id="searchbox">
+			<div class="form-group has-feedback">
+				<label for="search" class="sr-only">Search</label>
+				<input type="text" class="form-control" name="search" id="searchVal" placeholder="search">
+				<span class="glyphicon glyphicon-search form-control-feedback"></span>
+			</div>
+		</form>
+		</div>
 		<% if @category.menu_items.any? %>
 			<h3>Menu items (<%= @category.menu_items.count %>)</h3>
 				<%= will_paginate @menu_items %>
@@ -23,3 +31,11 @@
 	</div>
 </div>
 
+<script> 
+  $("#searchbox").submit(function( event ) {
+    event.preventDefault();
+    value = $('#searchVal').val();
+    if (value.trim() == "") value = ""; 
+    location = "<%= request.path %>?name=" + value;
+  });
+</script> 

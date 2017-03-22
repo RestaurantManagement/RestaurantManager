@@ -23,7 +23,13 @@ class CategoriesController < ApplicationController
   #GET /menu/:id
   #Menu by category
   def category
-    @menu_items = @category.menu_items.paginate(page: params[:page])
+    if params[:name]
+      @menu_items = MenuItem.matching(:name, params[:name])
+                    .where(category_id: @category.id)
+                    .paginate(page: params[:page])
+    else
+      @menu_items = @category.menu_items.paginate(page: params[:page])
+    end
   end
   # GET /categories/new
   def new

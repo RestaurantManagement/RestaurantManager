@@ -11,4 +11,15 @@ class MenuItem < ApplicationRecord
   validates :description, length: { maximum: 500 }
   #
   mount_uploader :image, ImageUploader
+
+  #like clause
+  def self.match_scope_condition(col, query)
+    arel_table[col].matches("%#{query}%")
+  end
+  ##
+  scope :matching, lambda {|*args|
+    col, opts = args.shift, args.extract_options!
+    op = opts[:operator] || :or
+    where args.flatten.map {|query| match_scope_condition(col, query) }.inject(&op)
+  }
 end

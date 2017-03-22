@@ -5,9 +5,10 @@
     <p style="width: 60%;"><%= category.content %></p>
     <%= link_to fa_icon("times 2x", class: "red-color"), category, 
         method: :delete, data: { confirm: 'Are you sure?' } %>
-    <a href=<%= new_menu_item_by_category_path(category) %> >
+    <a href=<%= edit_category_path(category) %> >
       <i class="fa fa-pencil-square-o fa-2x black-color" ></i>
     </a>
+    <%= link_to 'New item', new_menu_item_by_category_path(category) %></td>
   </div>
 </li>
 

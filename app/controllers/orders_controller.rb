@@ -5,18 +5,25 @@ class OrdersController < ApplicationController
   before_action :order_of_correct_user_or_admin, only: [:show, :detail_order, 
                                                         :edit, :update, :destroy]
   before_action :correct_user_or_admin, only: [:submittedOrder]
-  before_action :admin_user, only: [:index]
+  before_action :admin_user, only: [:index, :tableOrders]
 
   # GET /orders
   # GET /orders.json
   def index
-    @orders = Order.all
+    @orders = Order.paginate(page: params[:page], per_page: 20)
+              .order(paid: :asc, created_at: :desc)
   end
 
   # GET /users/:id/orders    (:id is userId)
   def submittedOrder
-    @orders = Order.where(user_id: params[:id]).paginate(page: params[:page], per_page: 10)
-                                                .order(created_at: :desc)
+    @orders = Order.where(user_id: params[:id]).paginate(page: params[:page], per_page: 20)
+                                                .order(paid: :asc, created_at: :desc)
+  end
+
+  # GET /tables/:id/orders
+  def tableOrders
+    @orders = Order.where(table_id: params[:id]).paginate(page: params[:page], per_page: 20)
+                                                .order(paid: :asc, created_at: :desc)
   end
 
   # GET /orders/1

@@ -8,6 +8,7 @@
     <p class="last-p"><%= order.paid ? "yes" : "no" %></p>
     <%= link_to fa_icon("times 2x", class: "red-color i-no-image"), "#", 
         method: :delete, data: { confirm: 'Are you sure?' } %>
-    <%= link_to fa_icon("info 2x", class: "greenleaf-color i-no-image"), "/users/#{params[:id]}/orders/#{order.id}" %>
+    <%= link_to fa_icon("info 2x", class: "greenleaf-color i-no-image"), 
+    	"/users/#{order.user_id}/orders/#{order.id}" %>
   </div>
 </li>

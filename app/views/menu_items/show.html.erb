@@ -1,27 +1,48 @@
-<p id="notice"><%= notice %></p>
+<div class="row config-min-height">
+	<div class="container form-bg align-center">
+		<h1><%= @menu_item.name %></h1>
+		<p><%= image_tag @menu_item.image_url.to_s, class: "show-item" %></p>
+		<h2 class="margin-t-b-20px">
+			<strong>Price:</strong>
+			<%= @menu_item.price %>$
+		</h2>
 
-<h2>
-  <strong>Name:</strong>
-  <%= @menu_item.name %>
-</h2>
+		<h2 style="margin-bottom: 20px;">
+			<strong>Description:</strong>
+			<%= @menu_item.description %>
+		</h2>
 
-<%= image_tag @menu_item.image_url.to_s, class: "show-item" %>
+		<div class="link-back-field">
+			<% if logged_in? %>
+				<% if admin_user? %>
+					<%= link_to 'Edit', edit_menu_item_path(@menu_item) %> |
+					<%= link_to 'Back', "/categories/#{@menu_item.category_id}" %>
+				<% else %>
+					<button id=<%= "btnOrder#{@menu_item.id}" %> class="btn btn-submit btn-submit-lg margin-t-b-20px">Order</button>
+					<div><%= link_to 'Back', "/menu/#{@menu_item.id}" %></div>
+				<% end %>
+			<% else %>
+				<div><%= link_to 'Back', "/menu/#{@menu_item.id}" %></div>
+			<% end %>
+		</div>
+	</div>
+</div>
 
-<p>
-  <strong>Price:</strong>
-  <%= @menu_item.price %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @menu_item.description %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @menu_item.category %>
-</p>
-
-<%= link_to 'Edit', edit_menu_item_path(@menu_item) %> |
-<%= link_to 'Back', menu_items_path %>
-<div class="config"></div>
+<script>
+  $("#<%= "btnOrder#{@menu_item.id}"%>").click(function(event) {
+    console.log('Log in ', <%= "btnOrder#{@menu_item.id}"%>);
+    var token = $('meta[name="csrf-token"]').attr("content")
+    var name = "<%= @menu_item.name %>"
+    axios.post("<%= create_order_item_path %>", {
+      menu_item_id: <%= @menu_item.id %>,
+      authenticity_token: token
+    })
+    .then(function(res) {
+      console.log("Response: ", res);
+      alert("Ordered "+ name)
+    }, function(res) {
+      console.log("Response error: ", res);
+      alert("Failed when ordered " + name)
+    })
+  })
+</script>
