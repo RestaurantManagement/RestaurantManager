@@ -27,6 +27,7 @@
               </a>
               <ul class="dropdown-menu nav drop-box">
 
+                <li><%= link_to "CREATE REVIEW", new_review_path(@review) %></li>
                 <li><%= link_to "PROFILE", current_user %></li>
                 <li><%= link_to "SETTINGS", edit_user_path(current_user) %></li>
                 <% if !admin_user? %>
