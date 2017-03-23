@@ -43,7 +43,8 @@
 			}
 		});*/
 	
-       
+       	
+       	console.log('Test mixitup')
         $(function(){
             $('#portfolio').mixitup({
                 targetSelector: '.item',

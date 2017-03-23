@@ -1,16 +1,14 @@
 
 
-<div class="row">
-  <div class="container form-bg align-center">
+<div class="row config-min-height">
+  <div class="container form-bg align-center" style="width: 30%;">
     <h1>Log in</h1>
-    <div class="form-wrapper">
+    <div class="form-wrapper-lg">
       <%= form_for(:session, url: login_path) do |f| %>
         <div class="input-text-group">
-        <%= f.label :email %>
-        <%= f.email_field :email, class: 'form-control' %>
-
-        <%= f.label :password %>
-        <%= f.password_field :password, class: 'form-control' %>
+        <%= f.email_field :email, class: 'form-control margin-t-b-20px', placeholder: "Email" %>
+        <div class="margin-t-b-20px"></div>
+        <%= f.password_field :password, class: 'form-control margin-t-b-20px', placeholder: "Password" %>
         </div>
         <%= f.submit "Log in", class: "btn btn-submit btn-submit-lg margin-t-b-20px" %>
       <% end %>
