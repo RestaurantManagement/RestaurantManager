@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   get   '/users/:id/orders', to: 'orders#submittedOrder', as: 'submittedOrders'
   get   '/users/:uid/orders/:id', to: 'orders#detail_order', as: 'detailOrder'
   post  '/orders/:id/pay', to: 'orders#pay', as: 'payOrder'
+  get   '/tables/:id/orders', to: 'orders#tableOrders', as: 'tableOrders'
   #built-in resource routes
 
 
