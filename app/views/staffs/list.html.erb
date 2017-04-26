@@ -1,18 +1,15 @@
 <% provide(:title, "List of Staffs") %>
 
-<div class="row">
-	<div class="config2"></div>
+<div class="row config-min-height bg-ctn">
+	<div class="container margin-top-bottom-std">
 <% @staffs.each_with_index do |staff, index| %>
   
-    <div class="col-md-4">
+    <div class="col-md-6 categories-a">
       <a href=<%= "list/#{staff.id}" %> >
-        <h2><%= staff.content %></h2>
-        <%= image_tag staff.image, width: "360px", height: "180px" %>
+		<h2 class="categories-title" > <%= staff.content %></h2>
+        <%= image_tag staff.image_url.to_s, width: "100%", height:"300px" %>
       </a>
     </div>
- 
-<% end %>
-<div class="config"></div>
- </div>
-<div class="config"></div>
-
+ 	<% end %>
+	</div>
+</div>

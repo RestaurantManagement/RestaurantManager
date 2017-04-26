@@ -1,23 +1,26 @@
-<% provide(:title, @staff.content) %>
-<div class="row">
-  <aside class="col-md-4">
-    <section class="staff_info">
-      <h1>
-        <%= @staff.content %>
-      </h1>
-    </section>
-  </aside>
-  <div class="col-md-8">
+<div class="config"></div>
+<div class="row config-min-height">
+  <div class="container margin-top-bottom-std">
+    <h2 class="categories-title"><%= @staff.content %></h2>
     <% if @staff.info_staffs.any? %>
-      <h3>List of Staffs (<%= @staff.info_staffs.count %>)</h3>
-      <ol class="info_staffs">
+      <h3 class="categories-title" >Our Staffs (<%= @staff.info_staffs.count %>)</h3>
+        <%= will_paginate @info_staffs %>
+        <section class="list-group-custom">
+          <div class="title-bar">
+            <p class="hidden-cus">HIDDEN</p>
+            <p>Name</p>
+            <p>Age</p>
+            <p>Joined</p>
+            <p class="hidden-cus">HIDDEN</p>
+          </div>
+          <ul class="list-group">
         <%= render @info_staffs %>
-      </ol>
-      <%= will_paginate @info_staffs %>
+      </ul>
+        </section>
+        <%= will_paginate @info_staffs %>
     <% end %>
   </div>
 </div>
 
-<%= link_to 'Edit', edit_staff_path(@staff) %> |
-<%= link_to 'Back', staffs_path %>
-<div class="config"></div>
+<p class="categories-title" ><%= link_to 'Edit', edit_staff_path(@staff) %> |
+<%= link_to 'Back', staffs_path %> </p>

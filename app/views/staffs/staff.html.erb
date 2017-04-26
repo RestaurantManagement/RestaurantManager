@@ -1,11 +1,24 @@
 <% provide(:title, @staff.content) %>
 
 <div class="row">
-	<h3><%= @staff.content %></h3>
-	<% if @staff.info_staffs.any? %>
-		<h4>List of Staffs (<%= @staff.info_staffs.count %>)</h4>
-		<%= render @info_staffs%>
-		<%= will_paginate @info_staffs %>
-	<% end %>
+	<div class="container margin-top-bottom-std">
+		<h2 class="categories-title"><%= @staff.content %></h2>
+		<% if @staff.info_staffs.any? %>
+			<h3>Our Staffs (<%= @staff.info_staffs.count %>)</h3>
+				<%= will_paginate @info_staffs %>
+				<section class="list-group-custom">
+					<div class="title-bar">
+						<p class="hidden-cus">HIDDEN</p>
+						<p>Name</p>
+						<p>Age</p>
+						<p>Joined</p>
+						<p class="hidden-cus">HIDDEN</p>
+					</div>
+					<ul class="list-group">
+						<%= render @info_staffs%>
+					</ul>
+				</section>
+				<%= will_paginate @info_staffs %>
+		<% end %>
+	</div>
 </div>
-<div class="config"></div>
