@@ -15,5 +15,6 @@ module ResManager
     # -- all .rb files in that directory are automatically loaded.
     config.assets.paths << Rails.root.join('vendor', 'assets', 'fonts')
 	config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
+	config.assets.initialize_on_precompile = false
   end
 end
